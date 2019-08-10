@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Jojo Siwa | The tour</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="header__mts">
+			<span class="header__note">При информационной поддержке МТС</span>
+			<img class="header__img" src="img/mts.svg" alt="МТС" />
+		</div>
+		<nav class="header__nav header-nav">
+			<!--Logo-->
+			<div class="header-nav__logo">
+				<a class="header-nav__link" href="#" target="_self">
+					<img class="header-nav__pic" src="img/main-logo.png" alt="Jojo Siwa" />
+				</a>
+			</div>
+			<!--Menu-->
+			<div class="header-nav__menu nav-menu">
+				<ul class="header-nav__list nav-list">
+					<li class="nav-list__item">
+						<a class="nav-list__link nav-list__link--howto" href="#" target="_self">Как участвовать</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link nav-list__link--prize" href="#" target="_self">Призы</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="#" target="_self">Галерея</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href="#" target="_self">Правила</a>
+					</li>
+				</ul>
+			</div>
+			<button class="header-nav__btn header-nav__btn--open" type="button" name="button"></button>
+			<button class="header-nav__btn header-nav__btn--close hidden" type="button" name="button"></button>
+		</nav>
+		<div class="header__intro intro">
+			<!--Текст интро-->
+			<h1 class="intro__title">На концерт Джоджо Сивы в Лондон с Евой Миллер из XO Life!</h1>
+			<p class="intro__description">Нарисуй яркий плакат, с которым ты пойдёшь на концерт ДжоДжо, сфотографируй его и отправь нам!</p>
+		</div>
+	</header>
+	<main class="main">
+		<form class="main-form" action="#" method="post">
+			<ul class="main-form__list form-list">
+				<li class="form-list__item">
+					<label class="form-list__label" for="name">Твоё имя:</label>
+					<input class="form-list__input form-list__input--name" type="text" id="name" required />
+					<span class="form-list__error form-list__error--name">Ты забыл написать своё имя!</span>
+				</li>
+				<li class="form-list__item">
+					<label class="form-list__label" for="tel">Номер телефона:</label>
+					<input class="form-list__input form-list__input--tel" type="tel" id="tel" required />
+					<span class="form-list__error form-list__error--tel">Ты забыл написать номер телефона!</span>
+				</li>
+				<li class="form-list__item form-list__item--file">
+					<b class="form-list__title">Загрузи свой плакат:</b>
+					<div class="form-list__wrap fl_upld">
+						<label class="form-list__btn" for="fl_inp">
+							<input type="file" name="file" id="fl_inp" class="form-list__file visually-hidden" />
+							Выбрать файл
+						</label>
+						<div class="form-list__info" id="fl_nm">Файл не выбран</div>
+					</div>
+					<span class="form-list__error form-list__error--file">Ошибка, ты забыл загрузить плакат!</span>
+				</li>
+				<li class="form-list__item form-list__item--agreement">
+					<input class="form-list__checkbox form-list__checkbox--agreement visually-hidden" type="checkbox" name="agree" id="agree" required checked />
+					<label class="form-list__label form-list__label--checkbox form-list__label--agreement" for="agree">Я согласен на <a class="form-list__label--link" href="#" target="_blank">обработку персональных данных</a></label>
+					<span class="form-list__error form-list__error--required">Это поле должно быть отмечено!</span>
+				</li>
+				<li class="form-list__item form-list__item--policy">
+					<input class="form-list__checkbox form-list__checkbox--policy visually-hidden" type="checkbox" name="policy" id="policy" required checked />
+					<label class="form-list__label form-list__label--checkbox form-list__label--policy" for="policy">Я согласен с <a class="form-list__label--link" href="#" target="_blank">условиями проведения конкурса</a></label>
+					<span class="form-list__error form-list__error--required">Это поле должно быть отмечено!</span>
+				</li>
+			</ul>
+			<button class="main-form__submit" type="submit">Отправить</button>
+		</form>
+	</main>
+	<!--Попап "как участвовать"-->
+	<div class="popup-howto">
+		<div class="popup-howto__wrapper">
+			<button class="popup-howto__close closer" type="button"></button>
+			<div class="popup-howto__content">
+				<h3 class="popup-howto__title">Как участвовать?</h3>
+				<ul class="popup-howto__list">
+					<li class="popup-howto__item">
+						Нарисуй плакат, с которым ты пойдёшь на концерт ДжоДжо;
+					</li>
+					<li class="popup-howto__item">
+						Загрузи фото с плакатом на этот сайт до 1 сентября (на фото должен быть только плакат);
+					</li>
+					<li class="popup-howto__item">
+						Специальное жюри Nickelodeon выберет самый яркий и интересный плакат, а его автор получит главный приз!
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--Попап "призы"-->
+	<div class="popup-prize">
+		<div class="popup-prize__wrapper">
+			<button class="popup-prize__close closer" type="button"></button>
+			<div class="popup-prize__content">
+				<p class="popup-prize__description">Ты можешь выиграть поездку в Лондон на концерт ДжоДжо Сивы вместе с Евой Миллер из XO Life!</p>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

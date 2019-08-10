@@ -1,0 +1,32 @@
+.intro {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  padding: 10px 10px 0px 10px;
+
+  &__title {
+    display: inline-flex;
+    width: 100%;
+
+    @include font-setting($primary-font-italic, 0.875em, 1.2, 900, #ec008c);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+
+  &__description {
+    display: inline-flex;
+    width: 100%;
+
+    @include font-setting($secondary-font, 0.75em, 1.2, 400, #7d3192);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0;
+  }
+}

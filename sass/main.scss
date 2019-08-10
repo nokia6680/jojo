@@ -1,0 +1,31 @@
+.main {
+  @include flex-setting(column, flex-start, center);
+  padding: 10px 10px;
+  margin: 0 auto;
+
+  max-width: 300px;
+}
+
+@media only screen and (min-width: $mobile) {
+  .main {
+
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .main {
+
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .main {
+
+  }
+}
+
+@media only screen and (min-width: $hd) {
+  .main {
+
+  }
+}

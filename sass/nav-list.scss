@@ -1,0 +1,40 @@
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  background-color: #ffffff;
+
+  position: absolute;
+  top: -3000px;
+
+  transition: 0.2s ease-in;
+
+  &--active {
+    top: 0;
+    left: 0;
+    transition: 0.4s ease-in-out;
+    z-index: 10;
+  }
+
+  &__item {
+    width: 100%;
+
+    @include flex-setting(column, center, center);
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+     border-top: 1px solid #ec008c;
+  }
+
+  &__link {
+    @include font-setting($primary-font-italic, 1.5em, 1.2, 900, #ffffff);
+    text-shadow: 0 1px 0 #ec008c, 0 -1px 0 #ec008c, 1px 0 0 #ec008c, -1px 0 0 #ec008c;
+    letter-spacing: 0.97px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
