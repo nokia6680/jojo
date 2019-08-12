@@ -30,19 +30,51 @@
 
 @media only screen and (min-width: $mobile) {
   .header {
+    &__mts {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
+    &__note {
+      font-size: 0.625em;
+    }
+
+    &__img {
+      width: 94px;
+      height: 24px;
+    }
   }
 }
 
 @media only screen and (min-width: $hdm) {
   .header {
+    &__mts {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
+    &__note {
+      font-size: 0.75em;
+    }
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .header {
+    &__mts {
+      padding-top: 23px;
+      padding-bottom: 23px;
+      padding-left: 48px;
+      padding-right: 48px;
+    }
 
+    &__note {
+      font-size: 1.313em;
+    }
   }
 }
 

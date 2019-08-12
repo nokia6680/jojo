@@ -107,3 +107,42 @@
     text-transform: uppercase;
   }
 }
+
+@media only screen and (min-width: $hdm) {
+  .popup-howto {
+    &__wrapper {
+      width: 368px;
+      height: 416px;
+
+      padding: 8px 8px;
+    }
+
+    &__close {
+      top: -20px;
+      right: -20px;
+    }
+
+    &__content {
+      border-radius: 24px;
+      height: 100%;
+    }
+
+    &__title {
+      margin-top: 35px;
+      margin-bottom: 25px;
+      font-size: 1.375em;
+    }
+
+    &__list {
+      padding-right: 24px;
+      margin-left: 50px;
+    }
+
+    &__item {
+      padding-left: 0px;
+      margin-bottom: 35px;
+
+      font-size: 0.875em;
+    }
+  }
+}

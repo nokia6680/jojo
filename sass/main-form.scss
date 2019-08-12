@@ -36,3 +36,31 @@
     }
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .main-form {
+    border: 8px solid #7d3192;
+    border-radius: 28px;
+
+    padding: 15px 15px;
+
+    &__submit {
+      font-size: 1em;
+
+      width: 189px;
+      height: 41px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .main-form {
+    padding: 28px 24px;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .main-form {
+    position: relative;
+  }
+}

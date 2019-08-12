@@ -27,7 +27,7 @@ body {
   padding: 0;
 
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 
   position: relative;
 
@@ -36,8 +36,8 @@ body {
 
   background-image: url('../img/rainbow-bg.png');
   background-repeat: no-repeat;
-  background-position: center left;
-  background-size: contain;
+  background-position: bottom center;
+  background-size: auto;
 
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;

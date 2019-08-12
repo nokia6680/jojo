@@ -60,3 +60,97 @@
     }
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .header-nav {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .hidden {
+      display: none;
+    }
+
+    &__logo {
+      min-width: 163px;
+      max-width: 163px;
+      height: 91px;
+    }
+
+    &__btn {
+      min-width: 50px;
+      max-width: 50px;
+      height: 50px;
+
+      &--open {
+        background-size: 27px 23px;
+      }
+
+      &--close {
+        background-size: 20px 21px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .header-nav {
+    &__logo {
+      min-width: 204px;
+      max-width: 204px;
+      height: 114px;
+    }
+
+    &__btn {
+      min-width: 60px;
+      max-width: 60px;
+      height: 60px;
+
+      &--open {
+        background-size: 33px 27px;
+      }
+
+      &--close {
+        background-size: 24px 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .header-nav {
+    padding-left: 48px;
+    padding-right: 48px;
+    
+    &__logo {
+      min-width: 272px;
+      max-width: 272px;
+      height: 152px;
+    }
+
+    &__btn {
+      min-width: 87px;
+      max-width: 87px;
+      height: 87px;
+
+      &--open {
+        background-size: 55px 46px;
+      }
+
+      &--close {
+        background-size: 41px 42px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+}
+
+@media only screen and (min-width: $hd) {
+
+}

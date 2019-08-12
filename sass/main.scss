@@ -8,19 +8,40 @@
 
 @media only screen and (min-width: $mobile) {
   .main {
+    padding: 0;
+    margin: 0 auto;
 
+    max-width: 330px;
   }
 }
 
-@media only screen and (min-width: $laptop) {
+@media only screen and (min-width: $hdm) {
   .main {
-
+    max-width: 352px;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: $tablet) {
   .main {
+    position: relative;
 
+    &::after {
+      position: absolute;
+      content: '';
+
+      background-image: url('../img/girl-bg.png');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      width: 712px;
+      height: 704px;
+
+      left: -515px;
+      bottom: -265px;
+
+      z-index: -1;
+    }
   }
 }
 

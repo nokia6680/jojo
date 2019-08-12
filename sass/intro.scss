@@ -30,3 +30,42 @@
     margin: 0;
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .intro {
+    padding: 10px 5px 5px 5px;
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .intro {
+    padding: 10px 20px 10px 20px;
+
+    &__title {
+      font-size: 1.125em;
+    }
+
+    &__description {
+      font-size: 0.875em;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .intro {
+    padding: 5px 108px 24px 108px;
+
+    &__title {
+      font-size: 1.688em;
+
+      line-height: 1.5;
+
+      max-width: 550px;
+    }
+
+    &__description {
+      line-height: 1.5;
+      max-width: 440px;
+    }
+  }
+}
