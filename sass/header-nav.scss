@@ -120,7 +120,7 @@
   .header-nav {
     padding-left: 48px;
     padding-right: 48px;
-    
+
     &__logo {
       min-width: 272px;
       max-width: 272px;
@@ -144,13 +144,64 @@
 }
 
 @media only screen and (min-width: $laptop) {
+  .header-nav {
+    align-items: flex-start;
+    padding-left: 73px;
+    padding-right: 73px;
 
+    background-color: transparent;
+
+    position: relative;
+
+    &__logo {
+      min-width: 297px;
+      max-width: 297px;
+      height: 166px;
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
 }
 
-@media only screen and (min-width: 1280px) {
-
+@media only screen and (min-width: $laptop-wide) {
+  .header-nav {
+    max-width: 1184px;
+    padding: 0;
+    padding-top: 10px;
+    margin: 0 auto;
+  }
 }
 
-@media only screen and (min-width: $hd) {
+@media only screen and (min-width: $widebook-hd) {
+  .header-nav {
+    padding-top: 16px;
 
+    &__logo {
+      min-width: 372px;
+      max-width: 372px;
+      height: 208px;
+      transition: 0.1s ease-in;
+
+      position: relative;
+
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 92px;
+        height: 140px;
+
+        top: 20%;
+        right: -45%;
+
+        background-image: url('../img/candy.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+  }
 }

@@ -256,3 +256,117 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .form-list {
+    &__label,
+    &__title {
+      font-size: 0.625em;
+
+      &--checkbox {
+        font-size: 0.5em;
+      }
+    }
+    &__input {
+      padding: 9px 14px;
+      font-size: 0.75em;
+    }
+
+    &__item {
+      &--agreement {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__error {
+      &--required {
+        left: 25px;
+      }
+    }
+
+    /*Кнопка и поле загрузки*/
+    &__wrap {
+      padding: 5px 5px;
+
+      padding-left: 7px;
+
+      font-size: 0.875em;
+    }
+
+    &__btn {
+      font-size: 0.688em;
+
+      width: 120px;
+      height: 23px;
+
+      &::after {
+        background-size: 20px 16px;
+
+        width: 20px;
+        height: 16px;
+
+        right: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .form-list {
+    &__label,
+    &__title {
+      font-size: 0.813em;
+
+      &--checkbox {
+        font-size: 0.62em;
+      }
+    }
+    &__input {
+      padding: 10px 16px;
+      font-size: 0.938em;
+    }
+
+    &__item {
+      margin-bottom: 15px;
+
+      &--agreement {
+        margin-bottom: 20px;
+      }
+
+      &--policy {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__error {
+      &--required {
+        left: 30px;
+      }
+    }
+
+    /*Кнопка и поле загрузки*/
+    &__wrap {
+      padding: 4px 4px;
+
+      padding-left: 16px;
+
+      font-size: 0.938em;
+    }
+
+    &__btn {
+      font-size: 0.813em;
+
+      width: 136px;
+      height: 30px;
+
+      &::after {
+        background-size: 22px 18px;
+
+        width: 22px;
+        height: 18px;
+
+        right: 5px;
+      }
+    }
+  }
+}

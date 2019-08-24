@@ -11,7 +11,7 @@
   z-index: 10;
 
   &--active {
-    top: 120px;
+    top: 95px;
 
     width: 100vw;
     height: 100vh;
@@ -24,7 +24,7 @@
 @media only screen and (min-width: $mobile) {
   .nav-menu {
     &--active {
-      top: 145px;
+      top: 110px;
     }
   }
 }
@@ -32,7 +32,7 @@
 @media only screen and (min-width: $hdm) {
   .nav-menu {
     &--active {
-      top: 175px;
+      top: 135px;
     }
   }
 }
@@ -40,7 +40,29 @@
 @media only screen and (min-width: $tablet) {
   .nav-menu {
     &--active {
-      top: 240px;
+      top: 170px;
     }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .nav-menu {
+    @include flex-setting(column, flex-start, center);
+    position: relative;
+    top: auto;
+    left: auto;
+
+    width: auto;
+    height: 25px;
+    background-color: transparent;
+
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .nav-menu {
+    height: 26px;
+    margin-top: 15px;
   }
 }

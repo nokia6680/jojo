@@ -4,8 +4,8 @@ html {
 }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -25,16 +25,12 @@ body {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
-
   min-height: 100vh;
   overflow: hidden;
-
   position: relative;
-
   color: #000000;
   font-family: $primary-font;
-
-  background-image: url('../img/rainbow-bg.png');
+  background-image: url("../img/rainbow-bg.png");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: auto;
@@ -42,6 +38,126 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  @media only screen and (min-width: 414px) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url("../img/girl-bg.png");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 712px;
+      height: 704px;
+      right: 50%;
+      bottom: -90px;
+      z-index: -1;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url("../img/eva-girl.png");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 599px;
+      left: 50%;
+      bottom: -50px;
+      z-index: -1;
+    }
+  }
+
+  @media only screen and (min-width: $tablet) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url("../img/girl-bg.png");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 712px;
+      height: 704px;
+      left: -315px;
+      bottom: -90px;
+      z-index: -1;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url("../img/eva-girl.png");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 599px;
+      right: -115px;
+      bottom: -50px;
+      z-index: -1;
+    }
+  }
+  @media only screen and (min-width: $laptop) {
+    &::after {
+      background-image: url("../img/girl-jojo.png");
+      width: 699px;
+      height: 690px;
+      left: auto;
+      right: 50%;
+      bottom: -245px;
+      z-index: -1;
+    }
+
+    &::before {
+      width: 420px;
+      height: 599px;
+      right: auto;
+      left: 60%;
+      bottom: -150px;
+      z-index: -1;
+    }
+  }
+  @media only screen and (min-width: $laptop-wide) {
+    background-size: contain;
+    background-position: bottom 20px center;
+  }
+  @media only screen and (min-width: $widebook-hd) {
+    background-size: auto;
+    background-position: bottom 70px center;
+
+    &::after {
+      width: 899px;
+      height: 888px;
+      right: 47%;
+      bottom: -375px;
+    }
+
+    &::before {
+      width: 528px;
+      height: 760px;
+      left: 60%;
+      bottom: -230px;
+    }
+  }
+  @media only screen and (min-width: $hd) {
+    background-image: url('../img/rainbow-bg.png'), url("../img/rainbow-top.png");
+    background-size: 100%, auto;
+    background-position: bottom 100px center, top left;
+
+    &::after {
+      right: 47%;
+      bottom: -230px;
+    }
+
+    &::before {
+      left: 57%;
+      bottom: -70px;
+    }
+  }
 }
 
 img {

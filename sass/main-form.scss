@@ -64,3 +64,82 @@
     position: relative;
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .main-form {
+    padding: 20px 25px;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 53px;
+      height: 51px;
+
+      background-image: url('../img/star-yellow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      top: -40px;
+      left: -35px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 62px;
+      height: 59px;
+
+      background-image: url('../img/star-red.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      bottom: -40px;
+      right: -40px;
+    }
+
+    &__submit {
+      font-size: 0.933em;
+
+      width: 161px;
+      height: 36px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .main-form {
+    padding: 24px 28px;
+
+    position: relative;
+    height: 407px;
+
+    &::after {
+      width: 61px;
+      height: 58px;
+
+      top: -45px;
+      left: -35px;
+    }
+
+    &::before {
+      width: 72px;
+      height: 69px;
+
+      bottom: -45px;
+      right: -40px;
+    }
+
+    &__submit {
+      font-size: 1.063em;
+
+      width: 189px;
+      height: 41px;
+    }
+  }
+}

@@ -13,14 +13,33 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function(m, e, t, r, i, k, a) {
+			m[i] = m[i] || function() {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		ym(54904411, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/54904411" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
 </head>
 
 <body class="body">
+
 	<header class="header">
-		<div class="header__mts">
-			<span class="header__note">При информационной поддержке МТС</span>
-			<img class="header__img" src="img/mts.svg" alt="МТС" />
-		</div>
 		<nav class="header__nav header-nav">
 			<!--Logo-->
 			<div class="header-nav__logo">
@@ -37,9 +56,10 @@
 					<li class="nav-list__item">
 						<a class="nav-list__link nav-list__link--prize" href="#" target="_self">Призы</a>
 					</li>
+					<!--
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Галерея</a>
-					</li>
+					</li>-->
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Правила</a>
 					</li>
@@ -92,6 +112,7 @@
 			<button class="main-form__submit" type="submit">Отправить</button>
 		</form>
 	</main>
+
 	<!--Попап "как участвовать"-->
 	<div class="popup-howto">
 		<div class="popup-howto__wrapper">
@@ -118,6 +139,15 @@
 			<button class="popup-prize__close closer" type="button"></button>
 			<div class="popup-prize__content">
 				<p class="popup-prize__description">Ты можешь выиграть поездку в Лондон на концерт ДжоДжо Сивы вместе с Евой Миллер из XO Life!</p>
+			</div>
+		</div>
+	</div>
+	<!--Попап Успешной отправки видео-->
+	<div class="popup-sent" style="display: none;">
+		<div class="popup-sent__wrapper">
+			<button class="popup-sent__close closer" type="button"></button>
+			<div class="popup-sent__content">
+				<p class="popup-sent__description">Супер!<br />Осталось дождаться результатов!</p>
 			</div>
 		</div>
 	</div>

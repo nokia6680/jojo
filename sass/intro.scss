@@ -69,3 +69,120 @@
     }
   }
 }
+@media only screen and (min-width: $laptop) {
+  .intro {
+    width: 100%;
+    padding: 0;
+
+    padding-left: 73px;
+    padding-right: 73px;
+
+    align-items: flex-end;
+    align-self: flex-end;
+
+    margin-top: -100px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+
+    &__title {
+      font-size: 1.125em;
+
+      line-height: 1.5;
+
+      max-width: 440px;
+    }
+
+    &__description {
+      font-size: 0.75em;
+      line-height: 1.5;
+      max-width: 380px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .intro {
+    padding: 0;
+    padding-right: 50px;
+    max-width: 1184px;
+    margin: 0 auto;
+    margin-top: -100px;
+    margin-bottom: 20px;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 112px;
+      height: 90px;
+
+      background-image: url('../img/arrow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      bottom: -110px;
+      right: 27%;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .intro {
+    padding: 0;
+    padding-right: 30px;
+    max-width: 1184px;
+    margin: 0 auto;
+    margin-top: -140px;
+    margin-bottom: 10px;
+
+    &__title {
+      font-size: 1.688em;
+      max-width: 560px;
+    }
+
+    &__description {
+      font-size: 1em;
+      max-width: 560px;
+    }
+
+    &::after {
+      width: 136px;
+      height: 109px;
+
+      bottom: -120px;
+      right: 23%;
+    }
+  }
+}
+
+@media only screen and (min-width: $hd) {
+  .intro {
+    padding: 0;
+    padding-right: 30px;
+    max-width: 1184px;
+    margin: 0 auto;
+    margin-top: -140px;
+    margin-bottom: 30px;
+
+    &__title {
+      font-size: 1.688em;
+      max-width: 560px;
+    }
+
+    &__description {
+      font-size: 1em;
+      max-width: 560px;
+    }
+
+    &::after {
+      width: 136px;
+      height: 109px;
+
+      bottom: -120px;
+      right: 23%;
+    }
+  }
+}

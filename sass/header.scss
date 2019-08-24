@@ -80,18 +80,52 @@
 
 @media only screen and (min-width: $laptop) {
   .header {
+    &__mts {
+      padding-top: 15px;
+      padding-bottom: 14px;
+      padding-left: 73px;
+      padding-right: 73px;
+      transition: 0.2s ease-in;
+    }
 
+    &__note {
+      font-size: 1em;
+    }
+
+    &__img {
+      width: 54px;
+      height: 16px;
+    }
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: $widebook-hd) {
   .header {
+    &__mts {
+      padding-top: 23px;
+      padding-bottom: 24px;
+      padding-left: 152px;
+      padding-right: 152px;
+      transition: 0.2s ease-in;
+    }
 
+    &__note {
+      font-size: 1.313em;
+    }
+
+    &__img {
+      width: 94px;
+      height: 24px;
+      transition: 0.2s ease-in;
+    }
   }
 }
 
 @media only screen and (min-width: $hd) {
   .header {
-
+    &__mts {
+      padding-left: 352px;
+      padding-right: 352px;
+    }
   }
 }
