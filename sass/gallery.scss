@@ -1,0 +1,103 @@
+.gallery {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  &__wrapper {
+    @include flex-setting(column, flex-start, center);
+
+    max-width: 238px;
+    width: 100%;
+  }
+
+  &__up,
+  &__down {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .gallery {
+    &__wrapper {
+      max-width: 286px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .gallery {
+    &__wrapper {
+      max-width: 357px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .gallery {
+    &__wrapper {
+      max-width: 477px;
+      min-width: 477px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .gallery {
+    &__wrapper {
+      width: 100%;
+      max-width: 904px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__slider {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    &__up,
+    &__down {
+      display: block;
+      width: 17px;
+      height: 27px;
+      border: none;
+
+      background-color: transparent;
+      background-image: url('../img/arrow-left.svg');
+      background-size: cover;
+      background-position: 50% 50%;
+
+      outline: none;
+      cursor: pointer;
+
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+        transition: 0.2s ease-in;
+      }
+    }
+
+    &__down {
+      transform: rotate(-90deg);
+    }
+
+    &__up {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .gallery {
+    width: 100%;
+    
+    &__wrapper {
+      max-width: 1220px;
+      min-width: 1220px;
+    }
+  }
+}

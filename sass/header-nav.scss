@@ -188,6 +188,7 @@
 
 
       &::after {
+        display: none;
         position: absolute;
         content: '';
 
@@ -201,6 +202,12 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
+      }
+    }
+
+    &__logo--gallery {
+      &::after {
+        display: none;
       }
     }
   }

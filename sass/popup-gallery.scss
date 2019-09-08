@@ -1,0 +1,218 @@
+.popup-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+
+  transition: 0.2s ease-in;
+
+  &__wrapper {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include flex-setting(column, flex-start, center);
+    background-color: #ffffff;
+    border: 2px solid #feabdc;
+
+    position: relative;
+  }
+
+  &__close {
+    -webkit-tap-highlight-color: transparent;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -35px;
+    right: 0px;
+
+    cursor: pointer;
+    outline: none;
+
+    background-color: transparent;
+
+    background-image: url('../img/cross.png');
+    background-size: 15px 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__item-photo {
+    @include flex-setting(column, center, center);
+    width: 296px;
+    height: 296px;
+    overflow: hidden;
+  }
+
+  &__item-pic {
+    height: 296px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__item-name {
+    @include flex-setting(column, center, flex-start);
+    @include font-setting($secondary-font, 1em, 1.2, 500, $text-secondary);
+    width: 100%;
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    background-color: #feabdc;
+    letter-spacing: 0.65px;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .popup-gallery {
+    &__wrapper {
+      width: 340px;
+    }
+
+    &__item-photo {
+      width: 336px;
+      height: 336px;
+    }
+
+    &__item-pic {
+      height: 336px;
+    }
+
+    &__item-name {
+      font-size: 1.125em;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .popup-gallery {
+    &__wrapper {
+      width: 380px;
+    }
+
+    &__item-photo {
+      width: 376px;
+      height: 376px;
+    }
+
+    &__item-pic {
+      height: 376px;
+    }
+
+    &__item-name {
+      font-size: 1.25em;
+      padding-left: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .popup-gallery {
+    &--active {
+      display: flex;
+
+      transition: 0.3s ease-in;
+    }
+
+    &__wrapper {
+      width: 540px;
+      border-width: 4px;
+    }
+
+    &__close {
+      width: 38px;
+      height: 38px;
+
+      top: -45px;
+      right: -45px;
+    }
+
+    &__item-photo {
+      width: 532px;
+      height: 532px;
+    }
+
+    &__item-pic {
+      height: 532px;
+    }
+
+    &__item-name {
+      font-size: 2em;
+      padding-left: 25px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .popup-gallery {
+    &--active {
+      display: flex;
+
+      transition: 0.3s ease-in;
+    }
+
+    &__wrapper {
+      width: 440px;
+    }
+
+    &__item-photo {
+      width: 432px;
+      height: 432px;
+    }
+
+    &__item-pic {
+      height: 432px;
+    }
+
+    &__item-name {
+      font-size: 1.75em;
+    }
+  }
+}
+
+@media only screen and (min-width: $hd) {
+  .popup-gallery {
+    &__wrapper {
+      width: 540px;
+    }
+
+    &__item-photo {
+      width: 532px;
+      height: 532px;
+    }
+
+    &__item-pic {
+      height: 532px;
+    }
+
+    &__item-name {
+      font-size: 2em;
+    }
+  }
+}

@@ -38,9 +38,27 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url("../img/eva-girl.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -80px;
+    z-index: -1;
+  }
+
   @media only screen and (min-width: 414px) {
     position: relative;
-
+    /*
     &::after {
       position: absolute;
       content: '';
@@ -53,7 +71,7 @@ body {
       right: 50%;
       bottom: -90px;
       z-index: -1;
-    }
+    }*/
 
     &::before {
       position: absolute;
@@ -65,7 +83,7 @@ body {
       width: 400px;
       height: 599px;
       left: 50%;
-      bottom: -50px;
+      bottom: -100px;
       z-index: -1;
     }
   }
@@ -98,6 +116,7 @@ body {
       height: 599px;
       right: -115px;
       bottom: -50px;
+      left: auto;
       z-index: -1;
     }
   }
@@ -157,6 +176,34 @@ body {
       left: 57%;
       bottom: -70px;
     }
+  }
+}
+
+.body-gallery {
+  background: transparent;
+
+  background-image: url('../img/rainbow-mobile-gallery.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    background-image: url('../img/gallery-rainbow-big.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    background-image: url('../img/gallery-rainbow-big.png');
+    background-repeat: no-repeat;
+    background-position: top 70% center;
+    background-size: auto;
   }
 }
 

@@ -96,3 +96,60 @@ $(document).ready( function() {
          $("#fl_nm").html(filename);
     });
 });
+
+// Подпишемся на ресайз и продиспатчим его для запуска
+$(window).on('resize', function(e){
+  // Переменная, по которой узнаем запущен слайдер или нет.
+  // Храним её в data
+  var init = $("#gallery-slider").data('init-slider');
+  // Если мобильный
+  if(window.innerWidth < 1024){
+    // Если слайдер не запущен
+    if(init != 1){
+      // Запускаем слайдер и записываем в data init-slider = 1
+      $('#gallery-slider').slick({
+        infinite: true,
+        initialSlide: 0,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        fade: true,
+        arrows: true,
+        prevArrow: '<div class="prev-g"></div>',
+        nextArrow: '<div class="next-g"></div>'
+      }).data({'init-slider': 1});
+    }
+  }
+  // Если десктоп
+  else {
+    // Если слайдер запущен
+    if(init == 1){
+      // Разрушаем слайдер и записываем в data init-slider = 0
+      $('#gallery-slider').slick('unslick').data({'init-slider': 0});
+    }
+  }
+}).trigger('resize');
+
+$(window).on('resize', function(e){
+  if(window.innerWidth < 1600){
+    $(document).ready(function() {
+      $("#up").click(function(event) {
+        $("#gallery-slider").scrollTop($("#gallery-slider").scrollTop() - 330);
+      });
+
+      $("#down").click(function(event) {
+        $("#gallery-slider").scrollTop($("#gallery-slider").scrollTop() + 330);
+      });
+    })
+  }
+
+  else {
+    $("#up").click(function(event) {
+      $("#gallery-slider").scrollTop($("#gallery-slider").scrollTop() - 290);
+    });
+
+    $("#down").click(function(event) {
+      $("#gallery-slider").scrollTop($("#gallery-slider").scrollTop() + 290);
+    });
+  }
+}).trigger('resize');

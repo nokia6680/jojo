@@ -26,6 +26,12 @@
     width: 70px;
     height: 18px;
   }
+
+  &--gallery {
+    box-shadow: 0 2px 5px #e2e0e0;
+    margin-bottom: 45px;
+    background-color: #ffffff;
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -60,6 +66,18 @@
     &__note {
       font-size: 0.75em;
     }
+
+    &--gallery {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) and (min-device-height: 700px) {
+  .header {
+    &--gallery {
+      margin-bottom: 65px;
+    }
   }
 }
 
@@ -74,6 +92,14 @@
 
     &__note {
       font-size: 1.313em;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) and (min-device-height: 700px) {
+  .header {
+    &--gallery {
+      margin-bottom: 45px;
     }
   }
 }
@@ -96,6 +122,10 @@
       width: 54px;
       height: 16px;
     }
+
+    &--gallery {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -117,6 +147,10 @@
       width: 94px;
       height: 24px;
       transition: 0.2s ease-in;
+    }
+
+    &--gallery {
+      margin-bottom: 25px;
     }
   }
 }
